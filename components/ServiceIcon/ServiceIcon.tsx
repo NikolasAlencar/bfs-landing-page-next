@@ -1,7 +1,7 @@
 "use client";
 
+import { useTheme } from "@/context/ThemeContext";
 import Image from "next/image";
-import { useTheme } from "@/hooks/use-theme";
 
 export function ServiceIcon({ icon }: { icon: string }) {
   const { theme } = useTheme();

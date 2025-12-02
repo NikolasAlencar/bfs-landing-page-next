@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/hooks/use-theme";
+import { useTheme } from "@/context/ThemeContext";
 import "./theme-toggle.css";
 
 export function ThemeToggle() {

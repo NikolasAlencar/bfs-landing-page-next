@@ -1,8 +1,8 @@
 "use client";
 
+import { useTheme } from "@/context/ThemeContext";
 import "./hero.css";
 import Image from "next/image";
-import { useTheme } from "@/hooks/use-theme";
 
 export function Hero() {
   const { theme } = useTheme();

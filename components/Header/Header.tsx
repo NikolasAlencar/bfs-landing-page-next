@@ -2,7 +2,7 @@
 
 import "./header.css";
 import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
-import { useTheme } from "@/hooks/use-theme";
+import { useTheme } from "@/context/ThemeContext";
 import Image from "next/image";
 
 export function Header() {
