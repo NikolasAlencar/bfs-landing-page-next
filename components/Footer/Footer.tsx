@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./footer.css";
 import Image from "next/image";
 
@@ -13,15 +14,28 @@ export function Footer() {
             height={40}
           />
           <p className="footer-description">
-            Paralegal • Contabilidade • Consultoria Empresarial
+            Soluções rápidas e confiáveis em Paralegal, Contabilidade e
+            Consultoria Empresarial. Velocidade, precisão e confiança para seu
+            negócio.
           </p>
         </div>
 
         <div className="footer-links">
-          <h4>Navegação</h4>
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#contato">Contato</a>
+          <h4>Institucional</h4>
+          <Link href="/">Início</Link>
+          <Link href="/quem-somos">Sobre</Link>
+          <Link href="/servicos">Serviços</Link>
+          <Link href="/contato">Contato</Link>
+        </div>
+
+        <div className="footer-links">
+          <h4>Serviços</h4>
+          <ul>
+            <li>Legalização Empresarial</li>
+            <li>Certificação Digital</li>
+            <li>Livros Societários</li>
+            <li>Emissão de Certidões</li>
+          </ul>
         </div>
 
         <div className="footer-social">
@@ -33,8 +47,7 @@ export function Footer() {
 
       <div className="footer-bottom">
         <p>
-          © {new Date().getFullYear()} BFS Assessoria — Todos os direitos
-          reservados.
+          © {new Date().getFullYear()} Business Fast Solutions. Todos os direitos reservados.
         </p>
       </div>
     </footer>
