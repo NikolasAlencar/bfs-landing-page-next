@@ -6,10 +6,9 @@
   width: 100%;
   z-index: 10;
   border-bottom: 1px solid var(--color-border);
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 
-/* container */
 .header .container {
   margin: auto;
   display: flex;
@@ -17,23 +16,21 @@
   justify-content: space-between;
 }
 
-/* logo */
 .header .logo {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--color-primary);
 }
 
 .header .logo img {
-  width: 70px;
-  height: 70px;
-  margin-right: 8px;
+  width: 4.375rem;
+  height: 4.375rem;
+  margin-right: 0.5rem;
 }
 
-/* nav */
 .header .nav a {
-  margin-left: 20px;
+  margin-left: 1.25rem;
   color: var(--color-text);
   text-decoration: none;
   font-weight: 500;

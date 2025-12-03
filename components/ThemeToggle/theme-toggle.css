@@ -1,8 +1,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 54px;
-  height: 28px;
+  width: 3.375rem;
+  height: 1.75rem;
 }
 
 .switch input {
@@ -16,34 +16,32 @@
   cursor: pointer;
   inset: 0;
   background: var(--color-border);
-  border-radius: 40px;
+  border-radius: 2.5rem;
   transition: 0.3s ease;
-  border: 2px solid var(--color-bg-soft);
+  border: 0.125rem solid var(--color-bg-soft);
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
-  left: 4px;
-  bottom: 3px;
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.25rem;
+  bottom: 0.1875rem;
   background-color: var(--color-bg-soft);
   border-radius: 50%;
   transition: 0.3s ease;
 }
 
-/* Quando ativo (dark mode) */
 input:checked + .slider {
   background: var(--color-bg-soft);
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(1.625rem);
   background: white;
 }
 
-/* Hover */
 .switch:hover .slider {
   border-color: var(--color-bg-soft-light);
 }

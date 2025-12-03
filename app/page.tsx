@@ -3,7 +3,7 @@ import { Services } from "@/components/Services/Services";
 
 export default function HomePage() {
   return (
-    <main style={{ marginTop: '170px' }}>
+    <main style={{ marginTop: '10.625rem' }}>
       <Hero />
 
       <Services />
