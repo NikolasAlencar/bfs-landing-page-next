@@ -1,5 +1,10 @@
 .header {
   font-family: 'Montserrat', 'Poppins', sans-serif;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   border-bottom: 1px solid var(--color-border);
   padding: 16px 0;
 }
