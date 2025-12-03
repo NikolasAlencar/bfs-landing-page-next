@@ -36,11 +36,7 @@ export function Hero() {
 
       <Image
         key={theme}
-        src={
-          theme === "light"
-            ? "/img/escritorio.png"
-            : "/img/escritorio-escuro.jpg"
-        }
+        src={'/img/escritorio.png'}
         alt="Escritório"
         className="hero-image"
         width={650}
