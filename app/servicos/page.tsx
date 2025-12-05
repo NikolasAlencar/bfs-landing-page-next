@@ -1,12 +1,15 @@
 "use client";
 
-import { useTheme } from "@/context/ThemeContext";
-import Image from "next/image";
 import "./servicos.css";
 
-export default function ServicosPage() {
-  const { theme } = useTheme();
+import { IoBusinessSharp } from "react-icons/io5";
+import { PiNotebookBold } from "react-icons/pi";
+import { MdOutlinePictureAsPdf } from "react-icons/md";
+import { LuFolderCog } from "react-icons/lu";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { HiBadgeCheck } from "react-icons/hi";
 
+export default function ServicosPage() {
   const servicos = [
     {
       icon: "escritorio",
@@ -40,46 +43,45 @@ export default function ServicosPage() {
     },
   ];
 
+  const icons = {
+    escritorio: <IoBusinessSharp size={30} />,
+    certificacao: <HiBadgeCheck size={30} />,
+    livro: <PiNotebookBold size={30} />,
+    certidao: <MdOutlinePictureAsPdf size={30} />,
+    documento: <LuFolderCog size={30} />,
+    suporte: <RiCustomerService2Fill size={30} />,
+  };
+
   return (
     <main className="page-container">
-      {/* HERO INTERNO */}
       <section className="page-hero">
         <p>
-          Soluções completas em legalização, certificação digital e apoio administrativo,
-          com agilidade, precisão e transparência.
+          Soluções completas para empresas com agilidade, precisão e
+          transparência.
         </p>
       </section>
 
-      {/* GRID DE SERVIÇOS */}
       <section className="services-list container">
         {servicos.map((item, index) => (
           <div className="service-card" key={index}>
-            {/* <Image
-              src={`/icons/${item.icon}.svg`}
-              width={48}
-              height={48}
-              alt={item.title}
-            /> */}
-
-            <h3>{item.title}</h3>
+            <h3>
+              <div className="service-icon">{icons[item.icon]}</div>
+              {item.title}
+            </h3>
             <p>{item.desc}</p>
           </div>
         ))}
       </section>
 
-      {/* CTA FINAL */}
       <section className="services-cta container">
         <h2>Precisa de ajuda com seu processo?</h2>
         <p>
-          Entre em contato conosco e tenha suporte rápido, seguro e personalizado
-          para qualquer demanda paralegal.
+          Entre em contato conosco e tenha suporte rápido, seguro e
+          personalizado.
         </p>
 
         <div className="cta-buttons">
-          <a
-            href="https://wa.me/5511940770068"
-            className="btn-primary"
-          >
+          <a href="https://wa.me/5511940770068" className="btn-primary">
             Falar no WhatsApp
           </a>
 
