@@ -4,6 +4,10 @@ import { useTheme } from "@/context/ThemeContext";
 import "./quem-somos.css";
 import Image from "next/image";
 
+import { FaHandshake } from "react-icons/fa";
+import { AiOutlineEye } from "react-icons/ai";
+import { IoRocketOutline } from "react-icons/io5";
+
 export default function QuemSomosPage() {
   const { theme } = useTheme();
 
@@ -24,6 +28,12 @@ export default function QuemSomosPage() {
       desc: "Ser referência no setor paralegal e administrativo, entregando um serviço rápido e inteligente para empresas de todos os portes.",
     },
   ];
+
+  const sobreIcons = {
+    missao: <IoRocketOutline size={30} />,
+    valores: <FaHandshake size={30} />,
+    visao: <AiOutlineEye size={30} />,
+  };
 
   return (
     <main className="page-container">
@@ -70,17 +80,20 @@ export default function QuemSomosPage() {
         </div>
       </section>
 
-      {/* Missão / Valores */}
+      {/* Missão / Valores / Visão */}
       <section className="mv-container container">
         {sobre.map((item, index) => (
           <div className="mv-card" key={index}>
-            <h3>{item.title}</h3>
+            <h3>
+              <div className="mv-icon">{sobreIcons[item.icon]}</div>
+              {item.title}
+            </h3>
             <p>{item.desc}</p>
           </div>
         ))}
       </section>
 
-      {/* Dados oficiais (CNPJ) */}
+      {/* Dados oficiais */}
       <section className="company-section container">
         <h2>Informações da Empresa</h2>
         <ul>

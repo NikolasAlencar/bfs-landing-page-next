@@ -75,6 +75,9 @@
 .mv-card h3 {
   margin-top: 1rem; 
   margin-bottom: 0.5rem; 
+  align-items: center;
+  display: flex;
+  gap: 1rem;
 }
 
 /* Dados oficiais */
