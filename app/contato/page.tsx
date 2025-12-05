@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import "./contato.css";
+import { Modal } from "@/components/Modal/Modal";
 
 export default function ContatoPage() {
   const [loading, setLoading] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState<"success" | "error">("success");
+  const [modalMessage, setModalMessage] = useState("");
 
   const [form, setForm] = useState({
     nome: "",
@@ -24,19 +28,28 @@ export default function ContatoPage() {
       body: JSON.stringify(form),
     });
 
-    setLoading(false);
-
-    if (!res.ok) {
-      alert("Erro ao enviar mensagem.");
-      return;
+    if (res.ok) {
+      setModalType("success");
+      setModalMessage("Sua mensagem foi enviada com sucesso!");
+    } else {
+      setModalType("error");
+      setModalMessage("Ocorreu um erro ao enviar sua mensagem.");
     }
-
-    alert("Mensagem enviada com sucesso!");
+    
+    setLoading(false);
+    setModalOpen(true);
     setForm({ nome: "", email: "", assunto: "", mensagem: "" });
   };
 
   return (
     <main className="page-container">
+      <Modal
+        open={modalOpen}
+        type={modalType}
+        message={modalMessage}
+        onClose={() => setModalOpen(false)}
+      />
+
       {/* Hero Interno */}
       <section className="contact-hero">
         <p>
