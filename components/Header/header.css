@@ -1,5 +1,5 @@
 .header {
-  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-family: "Montserrat", "Poppins", sans-serif;
   background: var(--color-bg);
   position: fixed;
   top: 0;
@@ -47,6 +47,13 @@
   display: flex;
   align-items: center;
   margin-left: 1rem;
+}
+
+.active {
+  color: var(--color-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.25rem;
 }
 
 /* BUTTON MOBILE */
@@ -100,6 +107,12 @@
 
 /* Animation */
 @keyframes dropdown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

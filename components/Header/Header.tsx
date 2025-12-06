@@ -6,13 +6,14 @@ import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
 import { useTheme } from "@/context/ThemeContext";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 
 export function Header() {
   const { theme } = useTheme();
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navOptions = [
     { name: "Início", path: "/" },
@@ -24,7 +25,6 @@ export function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-
         {/* LOGO */}
         <div className="logo" onClick={() => router.push("/")}>
           <Image
@@ -43,7 +43,11 @@ export function Header() {
         {/* NAV DESKTOP */}
         <nav className="nav desktop-nav">
           {navOptions.map((option) => (
-            <Link key={option.path} href={option.path}>
+            <Link
+              key={option.path}
+              href={option.path}
+              className={pathname === option.path ? "active" : ""}
+            >
               {option.name}
             </Link>
           ))}
@@ -71,7 +75,9 @@ export function Header() {
             <Link
               key={option.path}
               href={option.path}
-              className="mobile-link"
+              className={
+                pathname === option.path ? "mobile-link active" : "mobile-link"
+              }
               onClick={() => setMenuOpen(false)}
             >
               {option.name}
