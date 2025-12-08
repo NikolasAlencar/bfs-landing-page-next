@@ -9,6 +9,12 @@ import {
 import { AiOutlineMail } from "react-icons/ai";
 
 export function Footer() {
+  const footerLinks = [
+    "Legalização Empresarial",
+    "Certificação Digital",
+    "Livros Societários",
+    "Emissão de Certidões",
+  ];
   return (
     <footer className="footer">
       <div className="container footer-content">
@@ -37,10 +43,9 @@ export function Footer() {
         <div className="footer-links">
           <h4>Serviços</h4>
           <ul>
-            <li>Legalização Empresarial</li>
-            <li>Certificação Digital</li>
-            <li>Livros Societários</li>
-            <li>Emissão de Certidões</li>
+            {footerLinks.map((link, index) => (
+              <li key={index}>{link}</li>
+            ))}
           </ul>
         </div>
 
