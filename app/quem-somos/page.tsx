@@ -108,7 +108,7 @@ export default function QuemSomosPage() {
             <strong>Natureza Jurídica:</strong> Sociedade Empresária Limitada
           </li>
           <li>
-            <strong>Endereço:</strong> Av. Dr. Arnaldo, 333 – São Paulo, SP
+            <strong>Endereço:</strong> Av. Paulista, 1636 – Bela Vista – São Paulo, SP
           </li>
         </ul>
       </section>
