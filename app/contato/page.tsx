@@ -108,7 +108,7 @@ export default function ContatoPage() {
       />
 
       <section className="contact-hero">
-        <p>Estamos prontos para atender sua empresa com agilidade e segurança.</p>
+        <p>A sua melhor amiga em soluções.</p>
       </section>
 
       <section className="contact-cards container">
